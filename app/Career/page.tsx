@@ -5,10 +5,10 @@ import Image from "next/image";
 import React from "react";
 import SearchBar from "../components/SearchBar";
 function Career() {
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (value: string) => {
-    setSearchTerm(value);
+    // setSearchTerm(value);
     console.log(value);
   };
 
@@ -57,7 +57,6 @@ function Career() {
           ></Image>
         </div>
       </div>
-      <hr className="mt-10 mb-20" />
     </div>
   );
 }
