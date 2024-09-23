@@ -48,8 +48,10 @@ function Map() {
             />
           </svg>
           <p className="text-gray-500 text-sm">
-            CSII INDIA, C-56, A, 2, C Block, Phase 2, Industrial Area, Sector
-            62, Noida, Uttar Pradesh 201309
+            A.K. Enterprises, CSII INDIA Building, 5Th Floor, <br />
+            C-56, A, 2, C Block, Phase 2, Industrial Area, Sector 62,
+            <br />
+            Noida, Uttar Pradesh 201309
           </p>
         </div>
         <div className="flex items-center justify-between">
@@ -77,8 +79,23 @@ function Map() {
           </div>
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-center gap-2">
+              <svg
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM16 12V13.5C16 14.8807 17.1193 16 18.5 16V16C19.8807 16 21 14.8807 21 13.5V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21H16"
+                  stroke="#c0392b"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
               <p className="text-gray-500 text-sm py-5">
-                info@akenterprises.com
+                info@akenterprises.online
               </p>
             </div>
           </div>

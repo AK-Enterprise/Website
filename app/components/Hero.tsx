@@ -2,7 +2,11 @@
 // import Achievements from "./Achievements";
 import Image from "next/image";
 import Chair from "../assets/3DChair.gif";
+// import Chair from "../components/Chair";
 import Link from "next/link";
+// import { Canvas } from "react-three-fiber";
+// import { OrbitControls } from "@react-three/drei";
+// import { Environment } from "@react-three/drei";
 function Hero() {
   return (
     <div className="h-screen relative">
@@ -20,9 +24,26 @@ function Hero() {
             </button>
           </div>
         </div>
-        <div>
-          <Image src={Chair} alt="Chair" height={1500} width={1500}></Image>
-        </div>
+        {/* <Canvas camera={{ fov: 72, position: [2.3, 2.5, 2.3] }}>
+          <OrbitControls
+            enableZoom={false}
+            enableRotate={false}
+            enablePan={false}
+          />
+          <ambientLight intensity={1} />
+          <spotLight
+            position={[0, 25, 0]}
+            angle={1.3}
+            penumbra={1}
+            castShadow
+            intensity={2}
+            shadow-bias={-0.0001}
+          />
+          <Environment preset="studio" /> */}
+        {/* <Chair></Chair> */}
+
+        <Image src={Chair} alt="Chair" className="relative"></Image>
+        {/* </Canvas> */}
       </div>
     </div>
   );
