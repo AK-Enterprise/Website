@@ -13,7 +13,7 @@ function Career() {
   };
 
   return (
-    <div className="flex justify-center h-screen items-center">
+    <div>
       <div className="flex justify-between items-center h-screen m-auto max-w-[1280px]">
         {/* Hero Text  */}
         <div className="flex flex-col gap-5">
@@ -57,6 +57,10 @@ function Career() {
           ></Image>
         </div>
       </div>
+
+      <h2 className="text-xl flex justify-center items-center text-gray-400 text-center">
+        No Jobs Currently. Please Check Back Later
+      </h2>
     </div>
   );
 }

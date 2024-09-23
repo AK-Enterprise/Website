@@ -5,27 +5,31 @@ interface Testimonial {
   name: string;
   title: string;
   quote: string;
+  image: string;
 }
 import Image from "next/image";
 
 const testimonials: Testimonial[] = [
   {
-    name: "Anujay Goel",
-    title: "CEO, Co-Founder, XYZ Inc.",
+    name: "Anil Kumar",
+    title: "Director Of Dhammatek Limited",
     quote:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+      "A.K. Enterprises has been an invaluable partner, expertly managing everything for Dhammatek Limited—from product sourcing to marketplace sales and all our digital marketing needs. Their dedication and expertise have significantly contributed to our success.",
+    image: "/assets/PImage.jpg",
   },
   {
-    name: "Stallone Fernandes",
-    title: "Software Engineer, ABC Company",
+    name: "Ritu Kumar",
+    title: "Director Of Blisswood Limited",
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+      "A.K. Enterprises has been essential to Blisswood Limited, handling everything from manufacturing to product sourcing, marketplace sales, and digital marketing. Their comprehensive support has been a key factor in our growth and success.",
+    image: "/assets/PImage.jpg",
   },
   {
-    name: "Arpit Namdev",
-    title: "Marketing Manager, DEF Corp",
+    name: "Pravin Shukla",
+    title: "Sr. Manager Of Dhammatek Limited",
     quote:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+      "A.K. Enterprises has been a vital partner for Dhammatek Limited, seamlessly managing everything from product sourcing and manufacturing to marketplace sales and digital marketing. Their unwavering expertise and dedication have played a crucial role in our ongoing success.",
+    image: "/assets/PImage.jpg",
   },
 ];
 
@@ -73,9 +77,11 @@ const Testimonials = () => {
               {testimonials[currentTestimonial].quote}
             </p>
             <Image
-              src={PImage}
-              alt="P"
-              className="w-20 h-20 rounded-full mx-auto object-cover"
+              src={testimonials[currentTestimonial].image}
+              alt="Profile"
+              width={20}
+              height={20}
+              className="rounded-full mx-auto object-cover"
             />
             <h4 className="text-lg font-bold text-center">
               {testimonials[currentTestimonial].name}
