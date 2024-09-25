@@ -1,14 +1,39 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import FooterSofa from "../assets/FooterSofa.png";
 import Email from "../assets/Email.png";
+import { FormEvent } from "react";
+import axios from "axios";
 
 const Footer: React.FC = () => {
+  function Submit(e: FormEvent<HTMLFormElement>) {
+    const formElement: HTMLFormElement | null = e.target as HTMLFormElement;
+    e.preventDefault();
+    console.log("Submitted Form");
+
+    if (formElement) {
+      const formData: FormData = new FormData(formElement);
+      axios.post(
+        "https://script.google.com/a/macros/dhammatek.co.uk/s/AKfycbyiblRC6AOkQQD22ml7Y09M6iChnaRigrP1mQceYWARVc_pSZlMd5BRd9PcyAN1oV85/exec",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+    }
+  }
+
   return (
     <footer className="py-12 bottom-0">
       <div className="container mx-auto px-4 max-w-[1280px]">
         <div className="flex items-center justify-between">
-          <div>
+          <form
+            className="form"
+            onSubmit={(e: React.FormEvent<HTMLFormElement>) => Submit(e)}
+          >
             <div className="flex gap-2 items-center mb-2">
               <Image src={Email} alt="Email"></Image>
               <h3>Get In Touch</h3>
@@ -32,7 +57,10 @@ const Footer: React.FC = () => {
                 className="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
                 placeholder="Your Message"
               ></input>
-              <button className="rounded-md bg-[#C9B18F] p-2 hover:bg-[#e4d1b6] hover:text-white focus:outline-none">
+              <button
+                className="rounded-md bg-[#C9B18F] p-2 hover:bg-[#e4d1b6] hover:text-white focus:outline-none"
+                type="submit"
+              >
                 <svg
                   width="28"
                   height="28"
@@ -47,7 +75,7 @@ const Footer: React.FC = () => {
                 </svg>
               </button>
             </div>
-          </div>
+          </form>
           <Image src={FooterSofa} alt="FooterSofa"></Image>
         </div>
 
@@ -155,7 +183,7 @@ const Footer: React.FC = () => {
         <hr />
         <div className="mt-8 flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <p className="text-gray-600 text-sm">
-            Copyright 2022 A.K. Enterprises All Rights Reserved.
+            Copyright © 2024 A.K. Enterprises All Rights Reserved.
           </p>
           <div className="flex space-x-4 text-gray-600 text-sm">
             <a href="/TnC" className="hover:text-gray-900">

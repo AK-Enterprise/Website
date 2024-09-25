@@ -1,14 +1,12 @@
 "use client";
 import { useState } from "react";
-import PImage from "../assets/PImage.jpg";
 interface Testimonial {
   name: string;
   title: string;
   quote: string;
   image: string;
 }
-import Image from "next/image";
-
+// import Image from "next/image";
 const testimonials: Testimonial[] = [
   {
     name: "Anil Kumar",
@@ -29,7 +27,7 @@ const testimonials: Testimonial[] = [
     title: "Sr. Manager Of Dhammatek Limited",
     quote:
       "A.K. Enterprises has been a vital partner for Dhammatek Limited, seamlessly managing everything from product sourcing and manufacturing to marketplace sales and digital marketing. Their unwavering expertise and dedication have played a crucial role in our ongoing success.",
-    image: "/assets/PImage.jpg",
+    image: "",
   },
 ];
 
@@ -76,13 +74,13 @@ const Testimonials = () => {
             <p className="text-gray-700 text-center mb-4">
               {testimonials[currentTestimonial].quote}
             </p>
-            <Image
+            {/* <Image
               src={testimonials[currentTestimonial].image}
               alt="Profile"
               width={20}
               height={20}
               className="rounded-full mx-auto object-cover"
-            />
+            /> */}
             <h4 className="text-lg font-bold text-center">
               {testimonials[currentTestimonial].name}
             </h4>

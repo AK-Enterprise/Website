@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import React, { useState } from "react";
 
 const ContactForm: React.FC = () => {
@@ -6,11 +7,35 @@ const ContactForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", { name, email, phone, message });
+    setSubmitting(true);
+
+    try {
+      const spreadsheetId = "1MSZ4bawYCK6L1qZ_2aSdGED12-iSjMaKYqf7YQi3FJk";
+      const sheetName = "Contact";
+      const apiKey = "AIzaSyAa93CCgO54unPY54yC0JuNbwkhhOpJu4c";
+      const apiEndpoint = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}!A1:append?valueInputOption=USER_ENTERED&key=${apiKey}`;
+
+      const formData = {
+        Name: name,
+        Email: email,
+        Phone: phone,
+        Message: message,
+      };
+
+      const response = await axios.post(apiEndpoint, {
+        values: [Object.values(formData)],
+      });
+
+      console.log("Form submitted:", response);
+      setSubmitting(false);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -90,8 +115,9 @@ const ContactForm: React.FC = () => {
       <button
         type="submit"
         className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2"
+        disabled={submitting}
       >
-        Submit
+        {submitting ? "Submitting..." : "Submit"}
       </button>
     </form>
   );
