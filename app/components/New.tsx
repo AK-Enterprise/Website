@@ -32,8 +32,8 @@ function New() {
   };
 
   return (
-    <div className="h-screen max-w-[1280px] m-auto flex flex-col md:flex-row justify-center items-center gap-5">
-      <div className="w-1/2 flex items-start justify-center flex-col gap-5">
+    <div className="h-screen max-w-[1280px] m-10 md:m-auto flex flex-col md:flex-row justify-center items-center gap-5">
+      <div className="w-1/2 flex lg:items-start items-center justify-center flex-col gap-5">
         <h1 className="text-5xl md:text-7xl font-extrabold drop-shadow-lg text-[#C9B18F]">
           Entering In Multiple Categories
         </h1>
@@ -52,6 +52,7 @@ function New() {
             src={image}
             alt={`Image ${index + 1}`}
             className="block w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2 sm:w-1/3"
+            layout="responsive"
           />
         ))}
       </div>

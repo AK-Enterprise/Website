@@ -12,9 +12,9 @@ import ArmChair from "../components/ArmChair"
 
 function Hero() {
   return (
-    <div className="h-screen flex justify-center items-center flex-col">
+    <div className="mx-5 md:h-screen flex justify-center items-center flex-col gap-5">
       <div className="md:max-w-[1280px] m-auto flex flex-col md:flex-row items-center justify-center gap-2">
-        <div className="flex flex-col items-start justify-center gap-8">
+        <div className="flex flex-col items-center md:items-start justify-center gap-5">
           <h1 className="text-4xl md:text-8xl font-extrabold drop-shadow-lg text-[#C9B18F]">
             Creating Furniture That Speaks Your Style
           </h1>
@@ -24,7 +24,7 @@ function Hero() {
             </button>
           </div>
         </div>
-        <Canvas camera={{ fov: 89, position: [1, 5, 5] }} >
+        <Canvas camera={{ fov: 89, position: [1, 5, 5] }} className="hidden lg:block" >
           <OrbitControls
             enableZoom={true}
             enableRotate={true}
@@ -46,11 +46,10 @@ function Hero() {
         </Canvas>
       </div>
       <div className="flex justify-center items-center max-w-[1280px] m-auto relative">
-        <Image src={AchievementsSm} alt="Small" className="md:hidden"></Image>
-        <Image src={Achievements} alt="Achievements"></Image>
+        <Image src={AchievementsSm} alt="Small" className="flex justify-center items-center lg:hidden h-[20svh] w-[40svw]"></Image>
+        <Image src={Achievements} alt="Achievements" className="flex justify-center items-center hidden lg:block"></Image>
       </div>
     </div>
   );
 }
 export default Hero;
-

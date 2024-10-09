@@ -1,4 +1,4 @@
-import ContactForm from "../components/ContactForm";
+// import ContactForm from "../components/ContactForm";
 import Map from "../components/Map";
 function Contact() {
   return (
@@ -24,7 +24,8 @@ function Contact() {
       </div>
 
       <div className="flex justify-between items-start gap-5">
-        <ContactForm></ContactForm>
+        {/* <ContactForm></ContactForm> */}
+        {/* Removed Form As HR Said Not Required.  */}
         <Map></Map>
       </div>
     </div>

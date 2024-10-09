@@ -16,7 +16,7 @@ function Career() {
     <div>
       <div className="flex justify-between items-center h-screen m-auto max-w-[1280px]">
         {/* Hero Text  */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 mx-5">
           <h1 className="text-7xl font-bold">
             Find The Career With
             <span className="text-[#6A6A6A] flex justify-center flex-col items-start">
@@ -53,7 +53,7 @@ function Career() {
           <Image
             src={Girl}
             alt="Girl"
-            className="relative flex justify-center items-end m-0 p-0"
+            className="relative flex justify-center items-end"
           ></Image>
         </div>
       </div>

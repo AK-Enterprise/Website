@@ -3,10 +3,10 @@ import Image from "next/image";
 import Group from "../assets/Group.png";
 function Team() {
   return (
-    <div className="h-screen flex justify-center items-center max-w-[1280px]  m-auto gap-10 ">
+    <div className="h-screen flex md:flex-row flex-col-reverse justify-center items-center max-w-[1280px] mx-10  md:m-auto gap-10 ">
       <Image src={Group} alt="Group"></Image>
-      <div className="flex justify-center items-center flex-col gap-5">
-        <h2 className="text-5xl font-bold text-[#C9B18F] drop-shadow-lg">
+      <div className="flex justify-center items-center flex-col gap-5 my-10">
+        <h2 className="text-2xl lg:text-5xl font-bold text-[#C9B18F] drop-shadow-lg">
           Together We Worked Hard, Together We Succeeded !
         </h2>
         <p>

@@ -8,11 +8,11 @@ import Wayfair from "../assets/Wayfair.png";
 import Ebay from "../assets/Ebay.png";
 function Clients() {
   return (
-    <div className="max-w-[1280px] m-auto flex flex-col items-center justify-center gap-10 py-10">
-      <h1 className="text-4xl font-extrabold text-[#C9B18F]">
+    <div className="max-w-[1280px] m-auto flex flex-col items-center justify-center gap-10 my-10 h-screen hidden lg:block">
+      <h1 className="text-xl lg:text-4xl font-extrabold text-[#C9B18F]">
         Our Retail Partners
       </h1>
-      <div className="flex items-center justify-center gap-10">
+      <div className="flex items-center justify-center gap-10 flex-wrap">
         <Image
           src={Blisswood}
           alt="Blisswood"

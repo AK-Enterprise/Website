@@ -7,12 +7,14 @@ import Service from "../assets/Safety.png";
 
 function Why() {
   return (
-    <div className="max-w-[1280px] m-auto flex justify-center items-center gap-10">
-      <div className="h-screen flex justify-center items-center flex-col gap-20">
-        <h1 className="text-7xl font-extrabold drop-shadow-lg text-[#C9B18F]">
-          Why Choose Us ?
-        </h1>
-        <p>We Are The Most Prominent And Promising Support For Furniture Brands</p>
+    <div className="max-w-[1280px] mx-10 lg:m-auto flex justify-center items-center md:gap-10 flex-col md:flex-row">
+      <div className="h-100vh md:h-screen flex justify-center items-center flex-col gap-10">
+        <div className="flex justify-center items-center flex-col gap-2 mx-5">
+          <h1 className="text-4xl md:text-7xl font-extrabold drop-shadow-lg text-[#C9B18F]">
+            Why Choose Us ?
+          </h1>
+          <p className="text-sm">We Are The Most Prominent And Promising Support For Furniture Brands</p>
+        </div>
         <div className="grid grid-cols-2 gap-10">
           <div>
             <Image src={Truck} alt="Truck"></Image>
@@ -36,7 +38,7 @@ function Why() {
           </div>
         </div>
       </div>
-      <Image src={WhyImg} alt="Why Image" />
+      <Image src={WhyImg} alt="Why Image" layout="responsive" />
     </div>
   );
 }

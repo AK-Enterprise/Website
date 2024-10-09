@@ -13,11 +13,11 @@ const Footer: React.FC = () => {
             className="form"
           >
             <div className="flex gap-2 items-center mb-2">
-              <Image src={Email} alt="Email"></Image>
+              <Image src={Email} alt="Email" className="hidden md:block"></Image>
               <h3>Get In Touch</h3>
             </div>
             <div className="flex gap-4 items-center">
-              <div className="w-full max-w-sm min-w-[200px]">
+              <div className="w-full max-w-sm lg:min-w-[200px]">
                 <input
                   className="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
                   placeholder="Your Name"
@@ -54,15 +54,15 @@ const Footer: React.FC = () => {
               </button>
             </div>
           </form>
-          <Image src={FooterSofa} alt="FooterSofa" className=""></Image>
+          <Image src={FooterSofa} alt="FooterSofa" className="hidden lg:block" />
         </div>
 
         <div className="flex items-center">
           <div className="mb-6 max-w-[400px]">
-            <h2 className="text-2xl font-bold text-[#C9B18F]">
+            <h2 className="text-lg md:text-2xl font-bold text-[#C9B18F]">
               A.K Enterprises
             </h2>
-            <p className="mt-2 text-gray-600 text-sm">
+            <p className="mt-2 text-gray-600 text-xs md:text-sm">
               AK Enterprise is a furniture company known for its high-quality
               and stylish furniture designs. Specializing in both modern and
               affordable furniture, AK Enterprise focuses on creating durable
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Right Side  */}
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 text-sm">
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-2 text-sm">
             <div className="flex flex-col">
               <ul className="space-y-2 text-gray-600">
                 <li>
@@ -117,26 +117,8 @@ const Footer: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col">
-              <ul className="space-y-2 text-gray-600">
-                <li>
-                  <a href="/Contact" className="hover:text-gray-900">
-                    Support
-                  </a>
-                </li>
-                <li>
-                  <a href="/About" className="hover:text-gray-900">
-                    Knowledge
-                  </a>
-                </li>
-                <li>
-                  <a href="/Contact" className="hover:text-gray-900">
-                    Live Chat
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col">
+
+            <div className="flex flex-col hidden md:block">
               <ul className="space-y-2 text-gray-600">
                 <li>
                   <a href="/Career" className="hover:text-gray-900">
@@ -156,6 +138,8 @@ const Footer: React.FC = () => {
               </ul>
             </div>
           </div>
+
+
           <hr />
         </div>
         <hr />
