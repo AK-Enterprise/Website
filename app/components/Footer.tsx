@@ -3,36 +3,14 @@ import React from "react";
 import Image from "next/image";
 import FooterSofa from "../assets/FooterSofa.png";
 import Email from "../assets/Email.png";
-import { FormEvent } from "react";
-import axios from "axios";
 
 const Footer: React.FC = () => {
-  function Submit(e: FormEvent<HTMLFormElement>) {
-    const formElement: HTMLFormElement | null = e.target as HTMLFormElement;
-    e.preventDefault();
-    console.log("Submitted Form");
-
-    if (formElement) {
-      const formData: FormData = new FormData(formElement);
-      axios.post(
-        "https://script.google.com/a/macros/dhammatek.co.uk/s/AKfycbyiblRC6AOkQQD22ml7Y09M6iChnaRigrP1mQceYWARVc_pSZlMd5BRd9PcyAN1oV85/exec",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-    }
-  }
-
   return (
     <footer className="py-12 bottom-0">
       <div className="container mx-auto px-4 max-w-[1280px]">
         <div className="flex items-center justify-between">
           <form
             className="form"
-            onSubmit={(e: React.FormEvent<HTMLFormElement>) => Submit(e)}
           >
             <div className="flex gap-2 items-center mb-2">
               <Image src={Email} alt="Email"></Image>
@@ -76,7 +54,7 @@ const Footer: React.FC = () => {
               </button>
             </div>
           </form>
-          <Image src={FooterSofa} alt="FooterSofa"></Image>
+          <Image src={FooterSofa} alt="FooterSofa" className=""></Image>
         </div>
 
         <div className="flex items-center">

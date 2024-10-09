@@ -39,7 +39,7 @@ function NavBar() {
         </Link>
       </div>
       <button
-        className="lg:hidden flex flex-col justify-center w-8 h-8 bg-gray-200 rounded hover:bg-gray-300"
+        className="lg:hidden flex flex-col justify-center items-center w-8 h-8 bg-gray-200 rounded hover:bg-gray-300"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="block w-5 h-0.5 bg-black rounded-full"></span>

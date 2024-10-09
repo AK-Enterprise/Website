@@ -14,9 +14,9 @@ const ContactForm: React.FC = () => {
     setSubmitting(true);
 
     try {
-      const spreadsheetId = "1MSZ4bawYCK6L1qZ_2aSdGED12-iSjMaKYqf7YQi3FJk";
-      const sheetName = "Contact";
-      const apiKey = "AIzaSyAa93CCgO54unPY54yC0JuNbwkhhOpJu4c";
+      const spreadsheetId = "your-spreadsheet-id"; // Replace with your spreadsheet ID
+      const sheetName = "Sheet1"; // Replace with your sheet name
+      const apiKey = "your-api-key"; // Replace with your API key
       const apiEndpoint = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}!A1:append?valueInputOption=USER_ENTERED&key=${apiKey}`;
 
       const formData = {
@@ -28,10 +28,15 @@ const ContactForm: React.FC = () => {
 
       const response = await axios.post(apiEndpoint, {
         values: [Object.values(formData)],
+        majorDimension: "ROWS",
       });
 
       console.log("Form submitted:", response);
       setSubmitting(false);
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitting(false);

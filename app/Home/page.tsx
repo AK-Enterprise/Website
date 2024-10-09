@@ -5,24 +5,20 @@ import New from "../components/New";
 import Clients from "../components/Clients";
 import Testimonials from "../components/Testimonials";
 import Team from "../components/Team";
-import Image from "next/image";
-import Achievements from "../assets/Ach-Lg.png";
-// import HeroVidz from "../assets/HeroVidz.gif";
+import FadeIn from "../components/FadeIn";
+import TechnicalSupport from "../components/TechnicalSupport";
+import Video from "../components/Video"
 function Main() {
   return (
     <div>
-      {/* <Image
-        src={HeroVidz}
-        alt="HeroGif"
-        className="h-screen w-full relative"
-      ></Image> */}
+      <Video></Video>
       <Hero></Hero>
-      <div className="flex justify-center items-center max-w-[1280px] m-auto relative">
-        <Image src={Achievements} alt="Achievements"></Image>
-      </div>
-      <Why></Why>
+      <FadeIn>
+        <Why></Why>
+      </FadeIn>
       <Inspiration></Inspiration>
       <New></New>
+      <TechnicalSupport></TechnicalSupport>
       <Team></Team>
       <Clients></Clients>
       <Testimonials></Testimonials>
@@ -31,3 +27,4 @@ function Main() {
 }
 
 export default Main;
+
