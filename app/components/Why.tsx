@@ -7,7 +7,7 @@ import Service from "../assets/Safety.png";
 
 function Why() {
   return (
-    <div className="max-w-[1280px] mx-10 lg:m-auto flex justify-center items-center md:gap-10 flex-col md:flex-row">
+    <div className="max-w-[1280px] mx-10 lg:m-auto flex justify-center items-center md:gap-10 flex-col md:flex-row">s
       <div className="h-100vh md:h-screen flex justify-center items-center flex-col gap-10">
         <div className="flex justify-center items-center flex-col gap-2 mx-5">
           <h1 className="text-4xl md:text-7xl font-extrabold drop-shadow-lg text-[#C9B18F]">
